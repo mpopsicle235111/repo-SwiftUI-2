@@ -15,7 +15,7 @@ struct ContainerView: View {
         NavigationView {
             HStack {
                // LoginAndPasswordView(isUserLoggedIn: $shouldShowMainView)
-                NavigationLink(destination: UserView(), isActive: $shouldShowMainView) {
+                NavigationLink(destination: UserView(groups: groupsData, friends: friendsData), isActive: $shouldShowMainView) {
                         EmptyView()
                 }
             }

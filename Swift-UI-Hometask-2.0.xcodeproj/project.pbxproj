@@ -10,18 +10,22 @@
 		DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */; };
 		DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C028201955008A7EE5 /* FriendsView.swift */; };
 		DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C2282033DC008A7EE5 /* GroupsView.swift */; };
+		DB75E1C6282054CB008A7EE5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C5282054CB008A7EE5 /* Groups.swift */; };
 		DBCE575C28184560008F1609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCE575B28184560008F1609 /* Assets.xcassets */; };
 		DBCE575F28184560008F1609 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCE575E28184560008F1609 /* Preview Assets.xcassets */; };
 		DBCE576228184560008F1609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCE576028184560008F1609 /* LaunchScreen.storyboard */; };
 		DBCE576A2818458C008F1609 /* LoginAndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE57692818458C008F1609 /* LoginAndPasswordView.swift */; };
 		DBCE576C2818B710008F1609 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE576B2818B710008F1609 /* ContainerView.swift */; };
 		DBCE576E2818B8FA008F1609 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE576D2818B8FA008F1609 /* UserView.swift */; };
+		DBDDE42D282AA4C100C1EC44 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDE42C282AA4C100C1EC44 /* Friends.swift */; };
+		DBDDE42F282AC8DE00C1EC44 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hometask2App.swift; sourceTree = "<group>"; };
 		DB75E1C028201955008A7EE5 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		DB75E1C2282033DC008A7EE5 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		DB75E1C5282054CB008A7EE5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		DBCE57522818455C008F1609 /* Swift-UI-Hometask-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-UI-Hometask-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE575B28184560008F1609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCE575E28184560008F1609 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		DBCE57692818458C008F1609 /* LoginAndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndPasswordView.swift; sourceTree = "<group>"; };
 		DBCE576B2818B710008F1609 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		DBCE576D2818B8FA008F1609 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		DBDDE42C282AA4C100C1EC44 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB75E1C4282054BA008A7EE5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB75E1C5282054CB008A7EE5 /* Groups.swift */,
+				DBDDE42C282AA4C100C1EC44 /* Friends.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		DBCE57492818455C008F1609 = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +79,10 @@
 			children = (
 				DBCE576B2818B710008F1609 /* ContainerView.swift */,
 				DBCE576D2818B8FA008F1609 /* UserView.swift */,
+				DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */,
 				DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */,
 				DB75E1C028201955008A7EE5 /* FriendsView.swift */,
+				DB75E1C4282054BA008A7EE5 /* Data */,
 				DB75E1C2282033DC008A7EE5 /* GroupsView.swift */,
 				DBCE57692818458C008F1609 /* LoginAndPasswordView.swift */,
 				DBCE575B28184560008F1609 /* Assets.xcassets */,
@@ -157,9 +174,12 @@
 				DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */,
 				DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */,
 				DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */,
+				DBDDE42D282AA4C100C1EC44 /* Friends.swift in Sources */,
+				DBDDE42F282AC8DE00C1EC44 /* PhotoGridView.swift in Sources */,
 				DBCE576C2818B710008F1609 /* ContainerView.swift in Sources */,
 				DBCE576E2818B8FA008F1609 /* UserView.swift in Sources */,
 				DBCE576A2818458C008F1609 /* LoginAndPasswordView.swift in Sources */,
+				DB75E1C6282054CB008A7EE5 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

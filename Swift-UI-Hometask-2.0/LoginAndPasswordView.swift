@@ -4,6 +4,8 @@
 //
 //  Created by Anton Lebedev on 26.04.2022.
 //
+//Transfer between screens as per by by Jonathan Rasmusson's video
+//https://youtu.be/cwO7SW76awU
 
 import SwiftUI
 import Combine

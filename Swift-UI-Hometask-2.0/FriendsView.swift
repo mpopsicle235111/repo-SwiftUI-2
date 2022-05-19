@@ -11,34 +11,34 @@ import SwiftUI
 struct FriendsView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var showFriendsState: ShowFriendsState
+    @ObservedObject var viewModel: FriendsViewModel
     
-    var friends: [Friend]
+    init(viewModel: FriendsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        NavigationView {
-            List(friends) { friend in
-                NavigationLink(destination: PhotoGridView()) {
-                    
-                    HStack {
-                            Image(friend.imageName)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 50, height: 50, alignment: .center)
-                            VStack(alignment: .leading) {
-                                Text(friend.name)
-                                Text(friend.headline)
-                                    .foregroundColor(.gray)
-                                
-                            }
+        
+
+            List(viewModel.friendsAPI.sorted(by: { $0.lastName < $1.lastName})) { friendAPI in
+                    NavigationLink(destination: PhotoGridView()) {
+
+                    FriendCellView(friendAPI: friendAPI)
                     }
                 }
-            }
-        }
+               .onAppear { viewModel.fetch() }
+         }
+         
     }
-}
+    
+    
+
+
+
 
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView(friends: friendsData)
+        //FriendsView(viewModel: FriendsViewModel(api: FriendsAPI))
+        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
     }
 }

@@ -3,10 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4518D22835AB3C006C3C53 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */; };
+		DB4518D52835AB8B006C3C53 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D42835AB8B006C3C53 /* Friend.swift */; };
+		DB4518D72835AC83006C3C53 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D62835AC83006C3C53 /* FriendsViewModel.swift */; };
+		DB4518DA2835ACC7006C3C53 /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D92835ACC7006C3C53 /* Data+PrettyJSON.swift */; };
+		DB4518DD2835ADC3006C3C53 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DB4518DC2835ADC3006C3C53 /* Alamofire */; };
+		DB4518DF2835AE2E006C3C53 /* FriendCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518DE2835AE2E006C3C53 /* FriendCellView.swift */; };
+		DB4518E22835B4AD006C3C53 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DB4518E12835B4AD006C3C53 /* SDWebImageSwiftUI */; };
+		DB4ACC67283319C4009E7465 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ACC66283319C4009E7465 /* Session.swift */; };
+		DB4ACC6A28331B38009E7465 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ACC6928331B38009E7465 /* AuthView.swift */; };
+		DB4ACC6C28332400009E7465 /* TemporaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ACC6B28332400009E7465 /* TemporaryView.swift */; };
+		DB54F554283657F5003190FF /* GroupsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F553283657F5003190FF /* GroupsAPI.swift */; };
+		DB54F556283658E1003190FF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F555283658E1003190FF /* Group.swift */; };
+		DB54F55828365B45003190FF /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F55728365B45003190FF /* GroupsViewModel.swift */; };
+		DB54F55A28365CCE003190FF /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F55928365CCE003190FF /* GroupCellView.swift */; };
 		DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */; };
 		DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C028201955008A7EE5 /* FriendsView.swift */; };
 		DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C2282033DC008A7EE5 /* GroupsView.swift */; };
@@ -22,6 +36,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
+		DB4518D42835AB8B006C3C53 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		DB4518D62835AC83006C3C53 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		DB4518D92835ACC7006C3C53 /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
+		DB4518DE2835AE2E006C3C53 /* FriendCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellView.swift; sourceTree = "<group>"; };
+		DB4ACC66283319C4009E7465 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DB4ACC6928331B38009E7465 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		DB4ACC6B28332400009E7465 /* TemporaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryView.swift; sourceTree = "<group>"; };
+		DB54F553283657F5003190FF /* GroupsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPI.swift; sourceTree = "<group>"; };
+		DB54F555283658E1003190FF /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		DB54F55728365B45003190FF /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
+		DB54F55928365CCE003190FF /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hometask2App.swift; sourceTree = "<group>"; };
 		DB75E1C028201955008A7EE5 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		DB75E1C2282033DC008A7EE5 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
@@ -43,12 +69,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4518E22835B4AD006C3C53 /* SDWebImageSwiftUI in Frameworks */,
+				DB4518DD2835ADC3006C3C53 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4518D02835AB1F006C3C53 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */,
+				DB54F553283657F5003190FF /* GroupsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DB4518D32835AB76006C3C53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB4518D42835AB8B006C3C53 /* Friend.swift */,
+				DB54F555283658E1003190FF /* Group.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB4518D82835ACAF006C3C53 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB4518D92835ACC7006C3C53 /* Data+PrettyJSON.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB4ACC65283319AF009E7465 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DB4ACC66283319C4009E7465 /* Session.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DB4ACC6828331B16009E7465 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DB4ACC6928331B38009E7465 /* AuthView.swift */,
+				DB4ACC6B28332400009E7465 /* TemporaryView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		DB75E1C4282054BA008A7EE5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +153,18 @@
 				DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */,
 				DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */,
 				DB75E1C028201955008A7EE5 /* FriendsView.swift */,
-				DB75E1C4282054BA008A7EE5 /* Data */,
 				DB75E1C2282033DC008A7EE5 /* GroupsView.swift */,
+				DB4518D62835AC83006C3C53 /* FriendsViewModel.swift */,
+				DB54F55728365B45003190FF /* GroupsViewModel.swift */,
 				DBCE57692818458C008F1609 /* LoginAndPasswordView.swift */,
+				DB4518DE2835AE2E006C3C53 /* FriendCellView.swift */,
+				DB54F55928365CCE003190FF /* GroupCellView.swift */,
+				DB4518D82835ACAF006C3C53 /* Extension */,
+				DB4518D32835AB76006C3C53 /* Models */,
+				DB4518D02835AB1F006C3C53 /* API */,
+				DB4ACC6828331B16009E7465 /* Auth */,
+				DB4ACC65283319AF009E7465 /* Services */,
+				DB75E1C4282054BA008A7EE5 /* Data */,
 				DBCE575B28184560008F1609 /* Assets.xcassets */,
 				DBCE576028184560008F1609 /* LaunchScreen.storyboard */,
 				DBCE576328184560008F1609 /* Info.plist */,
@@ -117,6 +197,10 @@
 			dependencies = (
 			);
 			name = "Swift-UI-Hometask-2.0";
+			packageProductDependencies = (
+				DB4518DC2835ADC3006C3C53 /* Alamofire */,
+				DB4518E12835B4AD006C3C53 /* SDWebImageSwiftUI */,
+			);
 			productName = "Swift-UI-Hometask-2.0";
 			productReference = DBCE57522818455C008F1609 /* Swift-UI-Hometask-2.0.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +228,10 @@
 				Base,
 			);
 			mainGroup = DBCE57492818455C008F1609;
+			packageReferences = (
+				DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = DBCE57532818455C008F1609 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,15 +259,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4ACC67283319C4009E7465 /* Session.swift in Sources */,
+				DB4518D52835AB8B006C3C53 /* Friend.swift in Sources */,
 				DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */,
 				DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */,
 				DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */,
 				DBDDE42D282AA4C100C1EC44 /* Friends.swift in Sources */,
+				DB54F556283658E1003190FF /* Group.swift in Sources */,
+				DB54F55A28365CCE003190FF /* GroupCellView.swift in Sources */,
 				DBDDE42F282AC8DE00C1EC44 /* PhotoGridView.swift in Sources */,
+				DB4518DA2835ACC7006C3C53 /* Data+PrettyJSON.swift in Sources */,
 				DBCE576C2818B710008F1609 /* ContainerView.swift in Sources */,
+				DB4518DF2835AE2E006C3C53 /* FriendCellView.swift in Sources */,
 				DBCE576E2818B8FA008F1609 /* UserView.swift in Sources */,
+				DB4ACC6C28332400009E7465 /* TemporaryView.swift in Sources */,
+				DB54F554283657F5003190FF /* GroupsAPI.swift in Sources */,
 				DBCE576A2818458C008F1609 /* LoginAndPasswordView.swift in Sources */,
+				DB4518D72835AC83006C3C53 /* FriendsViewModel.swift in Sources */,
+				DB54F55828365B45003190FF /* GroupsViewModel.swift in Sources */,
+				DB4ACC6A28331B38009E7465 /* AuthView.swift in Sources */,
 				DB75E1C6282054CB008A7EE5 /* Groups.swift in Sources */,
+				DB4518D22835AB3C006C3C53 /* FriendsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +475,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB4518DC2835ADC3006C3C53 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DB4518E12835B4AD006C3C53 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBCE574A2818455C008F1609 /* Project object */;
 }

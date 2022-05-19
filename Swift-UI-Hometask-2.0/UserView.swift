@@ -36,7 +36,7 @@ struct UserView: View {
             VStack {
                 
                     
-                NavigationLink("", destination: FriendsView(friends: friendsData), isActive: $isShowingFriendsView)
+                NavigationLink("", destination: FriendsView(viewModel: FriendsViewModel(api: FriendsAPI())), isActive: $isShowingFriendsView)
                 
                 Button("Tap to see your friends") {
                     self.isShowingFriendsView = true
@@ -51,7 +51,7 @@ struct UserView: View {
                 .background(LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 
-                NavigationLink("", destination: GroupsView(groups: groupsData), isActive: $isShowingGroupsView)
+                NavigationLink("", destination: GroupsView(viewModel: GroupsViewModel(api: GroupsAPI())), isActive: $isShowingGroupsView)
                     
                 Button("Tap to see your groups") {
                         self.isShowingGroupsView = true
@@ -80,6 +80,7 @@ struct UserView: View {
                         Spacer()
                             .fullScreenCover(isPresented: $shouldShowModal, content: {
                                 //A button to return back to TabView
+                                FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
                                 Button(action: {shouldShowModal.toggle()}, label: {
                                 Text("GO BACK")
                                 })
@@ -108,7 +109,7 @@ struct UserView: View {
                                 List(friends) { friend in
                                     NavigationLink(destination: PhotoGridView()){
                                         HStack {
-                                                Image(friend.imageName)
+                                            Image(friend.imageName)
                                                     .resizable()
                                                     .scaledToFit()
                                                     .frame(width: 50, height: 50, alignment: .center)

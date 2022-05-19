@@ -8,29 +8,37 @@
 import SwiftUI
 
 struct GroupsView: View {
-    var groups: [Group]
+    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var showGroupsState: ShowGroupsState
+    @ObservedObject var viewModel: GroupsViewModel
+    
+    init(viewModel: GroupsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-       
-        List(groups) { group in
-            HStack {
-                    Image(group.imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50, alignment: .center)
-                    VStack(alignment: .leading) {
-                        Text(group.name)
-                        Text(group.headline)
-                            .foregroundColor(.gray)
-                    }
-            }
-        }
+        
+        ScrollView{
+            Text("Dummy Text For Test")
+//            List(viewModel.groupsAPI.sorted(by: { $0.name < $1.name})) { groupAPI in
+//                    NavigationLink(destination: PhotoGridView()) {
+//
+//                    GroupCellView(groupAPI: groupAPI)
+//                    }
+            
+                }
+            .onAppear { viewModel.fetch() }
+         }
+         
     }
-}
-
     
+    
+
+
+
+
 struct GroupsView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupsView(groups: groupsData)
+        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
     }
 }

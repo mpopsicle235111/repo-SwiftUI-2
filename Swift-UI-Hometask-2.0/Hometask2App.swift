@@ -23,10 +23,20 @@ class ShowFriendsState: ObservableObject {
     }
 }
 
+class ShowGroupsState: ObservableObject {
+    @Published var shouldShowGroupsView: Bool
+    
+    init(shouldShowGroupsView: Bool) {
+        self.shouldShowGroupsView = shouldShowGroupsView
+    }
+}
+
 @main
 struct Hometask2App: App {
     @ObservedObject var appState = AppState(isUserLoggedIn: false)
     @ObservedObject var showFriendsState = ShowFriendsState    (shouldShowFriendsView: false)
+    @ObservedObject var showGroupsState = ShowGroupsState    (shouldShowGroupsView: false)
+    @State var isUserLoggedIn: Bool = true
     
     var body: some Scene {
         WindowGroup {
@@ -37,7 +47,9 @@ struct Hometask2App: App {
                 
                 
             } else {
-                LoginAndPasswordView()
+                //LoginAndPasswordView()
+                    //.environmentObject(appState)
+                TemporaryView(isUserLoggedIn: $isUserLoggedIn)
                     .environmentObject(appState)
             }
     

@@ -18,13 +18,11 @@ struct GroupsView: View {
     
     var body: some View {
         
-        ScrollView{
-            Text("Dummy Text For Test")
-//            List(viewModel.groupsAPI.sorted(by: { $0.name < $1.name})) { groupAPI in
-//                    NavigationLink(destination: PhotoGridView()) {
-//
-//                    GroupCellView(groupAPI: groupAPI)
-//                    }
+            List(viewModel.groupsAPI.sorted(by: { $0.name < $1.name})) { groupAPI in
+                    NavigationLink(destination: PhotoGridView()) {
+
+                    GroupCellView(groupAPI: groupAPI)
+                    }
             
                 }
             .onAppear { viewModel.fetch() }

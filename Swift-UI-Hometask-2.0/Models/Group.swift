@@ -26,7 +26,7 @@ import Foundation
 
 //MARK: THIS IS MANUAL PARSING
 //We take necessary values from the list above
-struct GroupAPI {
+struct GroupAPI: Codable, Identifiable{
     var id: Int = 0
     var name: String = ""
     var photo100: String = ""

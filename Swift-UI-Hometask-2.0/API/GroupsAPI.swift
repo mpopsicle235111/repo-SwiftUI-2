@@ -27,20 +27,20 @@ class GroupsAPI: GroupsService {
     
     func getGroups(completion: @escaping([GroupAPI])->()) {
         
-        let path = "/groups.getCatalog"
+        let path = "/groups.get"
         let url = baseUrl + path
         
         //Params is a dictionary
-        let items: [String: String] = [
-            "is_member": "1",
-            "id": "group_id",
-            "count": "5",
-            "photo100": "photo_100",
-            "access_token": accessToken,     //"domain" here means User ID
+        let groupParams: [String: String] = [
+            "used_id": userId,
+            "access_token": accessToken,
+            "extended" : "1", //This is the key parameter: it returns
+                        //data on images and names
+                 
             "v": version
         ]
         //We send a request to server using Alamofire
-        AF.request(url, method: .get, parameters: items).responseJSON { response in
+        AF.request(url, method: .get, parameters: groupParams).responseJSON { response in
             
             // print(response.result)
             print(response.data?.prettyJSON)

@@ -7,6 +7,7 @@
 //  Custom tab bar by Brian Voong: https://youtu.be/9lVLFlyaiq4
 
 import SwiftUI
+import CamelSnaKebabPackage
 
 struct UserView: View {
     @EnvironmentObject var appState: AppState
@@ -14,6 +15,9 @@ struct UserView: View {
     @State private var isShowingGroupsView = false
     //A State to control the custom Tab Bar
     @State var selectedTabBarIndex = 0
+    @CamelSnaKebab(selectedCase: .Snake) var Line1 = "Hello, Jack Abramoff!"
+    @CamelSnaKebab(selectedCase: .Camel) var Line2 = "Hello, Jack Abramoff!"
+    @CamelSnaKebab(selectedCase: .Kebab) var Line3 = "Hello, Jack Abramoff!"
     let tabBarImageNames = ["house", "person.2.fill", "person.3", "newspaper", "eject.fill"]
     //A State to controll the full screen tile view
     @State var shouldShowModal = false
@@ -97,8 +101,12 @@ struct UserView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 100, height: 150, alignment: .center)
-                                Text("Welcome, Jack Abramoff.")
-                                
+                                    //Now using CamelSnaKebab package!
+                                    Text(Line1)
+                                        .font(.system(.body, design: .rounded))
+                                        .shadow(radius: 10.0)
+                                    Text(Line2)
+                                    Text(Line3)
                                     
                                     Spacer()
                                 }

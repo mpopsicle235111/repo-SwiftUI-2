@@ -21,6 +21,7 @@
 		DB54F556283658E1003190FF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F555283658E1003190FF /* Group.swift */; };
 		DB54F55828365B45003190FF /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F55728365B45003190FF /* GroupsViewModel.swift */; };
 		DB54F55A28365CCE003190FF /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54F55928365CCE003190FF /* GroupCellView.swift */; };
+		DB70FE59283B0445001DC7F2 /* CamelSnaKebabPackage in Frameworks */ = {isa = PBXBuildFile; productRef = DB70FE58283B0445001DC7F2 /* CamelSnaKebabPackage */; };
 		DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1BE282015B2008A7EE5 /* Hometask2App.swift */; };
 		DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C028201955008A7EE5 /* FriendsView.swift */; };
 		DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C2282033DC008A7EE5 /* GroupsView.swift */; };
@@ -71,6 +72,7 @@
 			files = (
 				DB4518E22835B4AD006C3C53 /* SDWebImageSwiftUI in Frameworks */,
 				DB4518DD2835ADC3006C3C53 /* Alamofire in Frameworks */,
+				DB70FE59283B0445001DC7F2 /* CamelSnaKebabPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +202,7 @@
 			packageProductDependencies = (
 				DB4518DC2835ADC3006C3C53 /* Alamofire */,
 				DB4518E12835B4AD006C3C53 /* SDWebImageSwiftUI */,
+				DB70FE58283B0445001DC7F2 /* CamelSnaKebabPackage */,
 			);
 			productName = "Swift-UI-Hometask-2.0";
 			productReference = DBCE57522818455C008F1609 /* Swift-UI-Hometask-2.0.app */;
@@ -231,6 +234,7 @@
 			packageReferences = (
 				DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				DB70FE57283B0445001DC7F2 /* XCRemoteSwiftPackageReference "CamelSnaKebabPackage" */,
 			);
 			productRefGroup = DBCE57532818455C008F1609 /* Products */;
 			projectDirPath = "";
@@ -493,6 +497,14 @@
 				minimumVersion = 2.0.2;
 			};
 		};
+		DB70FE57283B0445001DC7F2 /* XCRemoteSwiftPackageReference "CamelSnaKebabPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mpopsicle235111/CamelSnaKebabPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -505,6 +517,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		DB70FE58283B0445001DC7F2 /* CamelSnaKebabPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB70FE57283B0445001DC7F2 /* XCRemoteSwiftPackageReference "CamelSnaKebabPackage" */;
+			productName = CamelSnaKebabPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

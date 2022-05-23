@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CamelSnaKebabPackage",
+        "repositoryURL": "https://github.com/mpopsicle235111/CamelSnaKebabPackage",
+        "state": {
+          "branch": null,
+          "revision": "ef67d569180705c33370b17b0a3c7ef83dc7a462",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {

@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct FriendCellView: View {
     
     var friendAPI: FriendAPI
+    @State private var friendAvatarPressed = false
     
     var body: some View {
         HStack {
@@ -22,6 +23,16 @@ struct FriendCellView: View {
                     }
                     .scaledToFit()
                     .frame(width: 50, height: 50, alignment: .center)
+                    //User's avatar animation:
+                    .scaleEffect(friendAvatarPressed ? 1.25 : 1.0)
+                    .onTapGesture {
+                        withAnimation(.spring(response: 1.0,
+                                              dampingFraction: 0.5,
+                                              blendDuration: 0.2)) {
+                            self.friendAvatarPressed.toggle()
+                            }
+                        self.friendAvatarPressed.toggle()
+                    }
                     
             
                 VStack(alignment: .leading) {

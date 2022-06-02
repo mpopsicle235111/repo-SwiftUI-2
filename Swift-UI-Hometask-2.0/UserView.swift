@@ -11,13 +11,14 @@ import CamelSnaKebabPackage
 
 struct UserView: View {
     @EnvironmentObject var appState: AppState
-    @State private var isShowingFriendsView = false
-    @State private var isShowingGroupsView = false
+    //@State private var isShowingFriendsView = false
+    //@State private var isShowingGroupsView = false
+    @State private var isShowingPhotosView = false
     //A State to control the custom Tab Bar
     @State var selectedTabBarIndex = 0
-    @CamelSnaKebab(selectedCase: .Snake) var Line1 = "Hello, Jack Abramoff!"
-    @CamelSnaKebab(selectedCase: .Camel) var Line2 = "Hello, Jack Abramoff!"
-    @CamelSnaKebab(selectedCase: .Kebab) var Line3 = "Hello, Jack Abramoff!"
+    @CamelSnaKebab(selectedCase: .Snake) var Line1 = "CSK Library Test Snake: Hello, Jack Abramoff!"
+    @CamelSnaKebab(selectedCase: .Camel) var Line2 = "CSK Library Test Camel: Hello, Jack Abramoff!"
+    @CamelSnaKebab(selectedCase: .Kebab) var Line3 = "CSK Library Test Kebab: Hello_Jack Abramoff!"
     let tabBarImageNames = ["house", "person.2.fill", "person.3", "newspaper", "eject.fill"]
     //A State to controll the full screen tile view
     @State var shouldShowModal = false
@@ -25,6 +26,14 @@ struct UserView: View {
     var friends: [Friend]
     
     
+    //Add this line when you remove hardcoded groups and friends
+    //to use user's own data for PhotosView
+    //@ObservedObject var viewModel: PhotosViewModel
+    
+    //If you remove hardcoded groups and friends, you will be able to use user;s own data for Photos View
+    //init(viewModel: PhotosViewModel) {
+    //self.viewModel = viewModel
+    //}
     
     //This is used to fix the Xcode 12.3 bug when the tab bar has yellow background color by default. YOu can set it to .systemBackground
     //or .white
@@ -39,26 +48,14 @@ struct UserView: View {
         NavigationView {
             VStack {
                 
+                //A link to user's own photos, maybe make a special Tab for them?
+                //MARK: use hardcoded User id 693292969 instead of
+                //id: Int(Session.shared.userId) ?? 0
+                //TO DO: push user's values into this init, like it works for friends. Just remove hardcoded friends and groups and properly initialize the ViewModel (see above).
+                NavigationLink("", destination: PhotosView(viewModel: PhotosViewModel(friend: FriendAPI.init(canAccessClosed: false, domain: "", city: nil, id: Int(Session.shared.userId) ?? 0, photo100: "Jack-img", lastName: "\"Your own photos, ", photo50: "", trackCode: "", isClosed: false, firstName: "Jack Abramoff...\""), api: PhotosAPI())), isActive: $isShowingPhotosView)
                     
-                NavigationLink("", destination: FriendsView(viewModel: FriendsViewModel(api: FriendsAPI())), isActive: $isShowingFriendsView)
-                
-                Button("Tap to see your friends") {
-                    self.isShowingFriendsView = true
-                }
-                .foregroundColor(.black)
-                .font(.body)
-                //.textFieldStyle(OvalTextFieldStyle())
-                .padding(.top, 5)
-                .padding(.bottom, 5)
-                .padding(.leading, 20)
-                .padding(.trailing, 20)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                
-                NavigationLink("", destination: GroupsView(viewModel: GroupsViewModel(api: GroupsAPI())), isActive: $isShowingGroupsView)
-                    
-                Button("Tap to see your groups") {
-                        self.isShowingGroupsView = true
+                Button("Tap to see your photos") {
+                        self.isShowingPhotosView = true
                 }
                 .foregroundColor(.black)
                 .font(.body)
@@ -96,56 +93,32 @@ struct UserView: View {
                             NavigationView {
                                 VStack {
                                 Text("Home")
-                                    .navigationTitle("First Tab")
+                                    .navigationTitle("")
                                 Image("Jack-img")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 100, height: 150, alignment: .center)
                                     //Now using CamelSnaKebab package!
                                     Text(Line1)
-                                        .font(.system(.body, design: .rounded))
+                                        .font(.system(.footnote, design: .rounded))
                                         .shadow(radius: 10.0)
                                     Text(Line2)
+                                        .font(.system(.footnote, design: .rounded))
                                     Text(Line3)
+                                        .font(.system(.footnote, design: .rounded))
                                     
                                     Spacer()
                                 }
                             }
                         //Friends Tab
                         case 1:
-                            NavigationView {
-                                List(friends) { friend in
-                                    NavigationLink(destination: PhotoGridView()){
-                                        HStack {
-                                            Image(friend.imageName)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 50, height: 50, alignment: .center)
-                                                VStack(alignment: .leading) {
-                                                    Text(friend.name)
-                                                    Text(friend.headline)
-                                                        .foregroundColor(.gray)
-                                                }
-                                        }
-                                    }
-                                }
-                                 .navigationTitle("Jack's friends list")
-                            }
+                            FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
+                                .navigationBarTitle("Friends", displayMode: .automatic)
+                                 
                         //Groups Tab
                         case 2:
-                            List(groups) { group in
-                                HStack {
-                                        Image(group.imageName)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 50, height: 50, alignment: .center)
-                                        VStack(alignment: .leading) {
-                                            Text(group.name)
-                                            Text(group.headline)
-                                                .foregroundColor(.gray)
-                                        }
-                                }
-                            }
+                            GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
+                                .navigationBarTitle("Groups", displayMode: .automatic)
                         //News Tab
                         case 3:
                             ScrollView {
@@ -225,5 +198,6 @@ struct UserView: View {
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         UserView(groups: groupsData, friends: friendsData)
+        //Add PhotosViewModel here when you remove hardcoded friends and groups. See "PhotosView" for details
     }
 }

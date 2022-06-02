@@ -31,6 +31,14 @@ class ShowGroupsState: ObservableObject {
     }
 }
 
+class ShowPhotosState: ObservableObject {
+    @Published var shouldShowPhotosView: Bool
+    
+    init(shouldShowPhotosView: Bool) {
+        self.shouldShowPhotosView = shouldShowPhotosView
+    }
+}
+
 @main
 struct Hometask2App: App {
     @ObservedObject var appState = AppState(isUserLoggedIn: false)

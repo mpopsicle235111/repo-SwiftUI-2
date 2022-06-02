@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct GroupCellView: View {
     
     var groupAPI: GroupAPI
+    @State private var groupAvatarPressed = false
     
     var body: some View {
         HStack {
@@ -22,7 +23,16 @@ struct GroupCellView: View {
                     }
                     .scaledToFit()
                     .frame(width: 50, height: 50, alignment: .center)
-                    
+                    //Group's avatar animation:
+                    .scaleEffect(groupAvatarPressed ? 1.25 : 1.0)
+                    .onTapGesture {
+                        withAnimation(.spring(response: 1.0,
+                                          dampingFraction: 0.5,
+                                          blendDuration: 0.2)) {
+                        self.groupAvatarPressed.toggle()
+                        }
+                        self.groupAvatarPressed.toggle()
+                    }
             
                 VStack(alignment: .leading) {
                     Text(groupAPI.name)

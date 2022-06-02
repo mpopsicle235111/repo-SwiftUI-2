@@ -21,7 +21,7 @@ struct FriendsView: View {
         
 
             List(viewModel.friendsAPI.sorted(by: { $0.lastName < $1.lastName})) { friendAPI in
-                    NavigationLink(destination: PhotoGridView()) {
+                NavigationLink(destination: PhotosView(viewModel: PhotosViewModel(friend: FriendAPI.init(canAccessClosed: friendAPI.canAccessClosed, domain: friendAPI.domain, city: friendAPI.city, id: friendAPI.id, photo100: friendAPI.photo100, lastName: friendAPI.lastName, photo50: friendAPI.photo50, trackCode: friendAPI.trackCode, isClosed: friendAPI.isClosed, firstName: friendAPI.firstName), api: PhotosAPI() ))) {
 
                     FriendCellView(friendAPI: friendAPI)
                     }

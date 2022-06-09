@@ -50,7 +50,7 @@ struct Hometask2App: App {
         WindowGroup {
           
             if appState.isUserLoggedIn {
-                UserView(groups: groupsData, friends: friendsData)
+                ContentView()
                     .environmentObject(appState)
                 
                 

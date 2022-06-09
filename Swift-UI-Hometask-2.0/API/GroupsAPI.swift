@@ -18,6 +18,8 @@ protocol GroupsService {
 
 class GroupsAPI: GroupsService {
     
+    @ObservedObject var session = Session.shared
+    
     let baseUrl = "https://api.vk.com/method"
     let userId = Session.shared.userId
     let accessToken = Session.shared.token
@@ -46,21 +48,22 @@ class GroupsAPI: GroupsService {
             print(response.data?.prettyJSON)
             guard let jsonData = response.data else { return }
             
-            //MARK: THIS IS MANUAL PARSING
             do {
-                let jsonContainer: Any = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
-                
-                //Force unwrap here is on purpose
-                //so we can better track errors
-                let jsonObject = jsonContainer as! [String: Any]
-                let response = jsonObject["response"] as! [String: Any]
-                let items = response["items"] as! [Any]
-                
-                let groupsAPI = items.map { GroupAPI(item: $0 as! [String: Any])}
+                let groupsContainer  = try  JSONDecoder().decode(GroupsContainer.self, from: jsonData)
+                let groupsAPI = groupsContainer.response.items
+                print(groupsAPI)
                 completion(groupsAPI)
             } catch {
                 print(error)
             }
         }
+        
+        
+        
+        
+        
     }
+    
+  
+    
 }

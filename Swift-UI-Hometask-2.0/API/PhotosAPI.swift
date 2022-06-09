@@ -38,7 +38,7 @@ class PhotosAPI: PhotosService {
            let url = baseUrl + path
 
             //Params is a dictionary
-           var photoParams: [String: String] = [
+            let photoParams: [String: String] = [
                 //Modified to get friends' photos
                 //"user_id": ("\(userId)"),
                 "owner_id": ("\(userId)"),
@@ -59,16 +59,21 @@ class PhotosAPI: PhotosService {
                guard let jsonData = response.data else { return }
                
                
-               ///MARK: THIS IS QUICKTYPE.IO auto parsing
-               let photosContainer = try? JSONDecoder().decode(PhotosContainer.self, from: jsonData)
-       
-            
-            guard let photos = photosContainer?.response?.items else { return }
-            
-               completion(photos)
-        
+            do {
+               let photosContainer = try JSONDecoder().decode(PhotosContainer.self, from: jsonData)
+               let photosAPI = photosContainer.response.items
+                print("=================")
+                print(photosAPI)
+                print("=================")
+                print("Photos Printed")
+                print("=================")
+                completion(photosAPI)
+            } catch {
+              print(error)
             }
              
-            }
+            
     }
 
+    }
+}

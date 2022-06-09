@@ -11,12 +11,13 @@ import SwiftUI
 struct ContainerView: View {
     @State private var shouldShowMainView: Bool = false
     @ObservedObject var session = Session.shared
+    @State private var currentIndex = 0
     
     var body: some View {
         NavigationView {
             HStack {
                // LoginAndPasswordView(isUserLoggedIn: $shouldShowMainView)
-                NavigationLink(destination: UserView(groups: groupsData, friends: friendsData), isActive: $shouldShowMainView) {
+                NavigationLink(destination: BasicView(selectedIndex: $currentIndex)) {
                         EmptyView()
                 }
             }

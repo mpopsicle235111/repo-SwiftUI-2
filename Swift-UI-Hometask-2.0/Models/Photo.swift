@@ -10,25 +10,27 @@ import Foundation
 
 // MARK: - PhotoContainer
 struct PhotosContainer: Codable {
-    let response: PhotosResponse?
+    let response: PhotosResponse
     let name: String?
     let founded: Int?
     let members: [String]?
+    
 }
 
 // MARK: - Response
-struct PhotosResponse: Codable {
+struct PhotosResponse: Codable{
     let count: Int
     let items: [PhotoAPI]
 }
 
 // MARK: - Item
 struct PhotoAPI: Codable, Identifiable {
-    let albumID, id, date: Int
-    let text: String
-    let sizes: [Size]
-    let hasTags: Bool
-    let ownerID: Int
+    let albumID, id: Int?
+    let date: Int
+    let text: String?
+    let sizes: [Size]?
+    let hasTags: Bool?
+    let ownerID: Int?
     let postID: Int?
     
     enum CodingKeys: String, CodingKey {
@@ -41,15 +43,11 @@ struct PhotoAPI: Codable, Identifiable {
 }
 
 // MARK: - Size
-struct Size: Codable {
+struct Size: Codable, Identifiable {
     let width, height: Int
     let url: String
     let type: String
+    let id: Int?
 }
 
-// MARK: - Track
-struct Track: Codable {
-    let name: String
-    let duration: Int
-}
 

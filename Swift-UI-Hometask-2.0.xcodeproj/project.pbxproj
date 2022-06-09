@@ -12,6 +12,17 @@
 		DB0DD0C228463E850035ECA3 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DD0C128463E850035ECA3 /* PhotosViewModel.swift */; };
 		DB0DD0C428463FF60035ECA3 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DD0C328463FF60035ECA3 /* PhotosView.swift */; };
 		DB0DD0C6284679450035ECA3 /* PhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DD0C5284679450035ECA3 /* PhotoCellView.swift */; };
+		DB264041284CCA560022E00F /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264040284CCA560022E00F /* LargeImageViewController.swift */; };
+		DB264044284CCE420022E00F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264043284CCE420022E00F /* Colors.swift */; };
+		DB264046284CCE710022E00F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264045284CCE710022E00F /* News.swift */; };
+		DB264048284CCEB90022E00F /* NewsFeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264047284CCEB90022E00F /* NewsFeedAPI.swift */; };
+		DB26404B284CCF4E0022E00F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DB26404A284CCF4E0022E00F /* SwiftyJSON */; };
+		DB26404F284CD4140022E00F /* PostTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26404E284CD4140022E00F /* PostTextCell.swift */; };
+		DB264051284CD4400022E00F /* PhotoPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264050284CD4400022E00F /* PhotoPostCell.swift */; };
+		DB264053284CD4700022E00F /* LikeCommCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264052284CD4700022E00F /* LikeCommCell.swift */; };
+		DB264055284CD4C80022E00F /* NewsPhotoCollectionCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264054284CD4C80022E00F /* NewsPhotoCollectionCellCollectionViewCell.swift */; };
+		DB264057284CD95E0022E00F /* NewsChannelHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264056284CD95E0022E00F /* NewsChannelHeaderCell.swift */; };
+		DB264063284D8C5F0022E00F /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264062284D8C5F0022E00F /* PhotoCollectionCell.swift */; };
 		DB4518D22835AB3C006C3C53 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */; };
 		DB4518D52835AB8B006C3C53 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D42835AB8B006C3C53 /* Friend.swift */; };
 		DB4518D72835AC83006C3C53 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4518D62835AC83006C3C53 /* FriendsViewModel.swift */; };
@@ -31,6 +42,16 @@
 		DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C028201955008A7EE5 /* FriendsView.swift */; };
 		DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C2282033DC008A7EE5 /* GroupsView.swift */; };
 		DB75E1C6282054CB008A7EE5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E1C5282054CB008A7EE5 /* Groups.swift */; };
+		DB9FB888284C1CA70032233E /* BottomBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB887284C1CA70032233E /* BottomBarItemView.swift */; };
+		DB9FB88A284C1CEB0032233E /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB889284C1CEB0032233E /* BottomBar.swift */; };
+		DB9FB88C284C1D0E0032233E /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB88B284C1D0E0032233E /* BottomBarItem.swift */; };
+		DB9FB88E284C1D2D0032233E /* BarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB88D284C1D2D0032233E /* BarBuilder.swift */; };
+		DB9FB890284C1E510032233E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB88F284C1E510032233E /* MainTabBarController.swift */; };
+		DB9FB892284C23830032233E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB891284C23830032233E /* UserViewController.swift */; };
+		DB9FB894284C242A0032233E /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB893284C242A0032233E /* FriendsViewController.swift */; };
+		DB9FB896284C24800032233E /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB895284C24800032233E /* GroupsViewController.swift */; };
+		DB9FB898284C255A0032233E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB897284C255A0032233E /* NewsViewController.swift */; };
+		DB9FB89A284C25710032233E /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FB899284C25710032233E /* ExitViewController.swift */; };
 		DBBA33A128483EFB0058CC2F /* LikeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA33A028483EFB0058CC2F /* LikeButtonView.swift */; };
 		DBCE575C28184560008F1609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCE575B28184560008F1609 /* Assets.xcassets */; };
 		DBCE575F28184560008F1609 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCE575E28184560008F1609 /* Preview Assets.xcassets */; };
@@ -40,6 +61,9 @@
 		DBCE576E2818B8FA008F1609 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE576D2818B8FA008F1609 /* UserView.swift */; };
 		DBDDE42D282AA4C100C1EC44 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDE42C282AA4C100C1EC44 /* Friends.swift */; };
 		DBDDE42F282AC8DE00C1EC44 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */; };
+		DBEEEA88284F929200C7E16F /* FriendPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEEA87284F929200C7E16F /* FriendPhotoCollectionViewController.swift */; };
+		DBEEEA8A284F92FA00C7E16F /* UserPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEEA89284F92FA00C7E16F /* UserPhotoCollectionViewController.swift */; };
+		DBEEEA8C284F93B900C7E16F /* GroupPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEEA8B284F93B900C7E16F /* GroupPhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +72,16 @@
 		DB0DD0C128463E850035ECA3 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		DB0DD0C328463FF60035ECA3 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		DB0DD0C5284679450035ECA3 /* PhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellView.swift; sourceTree = "<group>"; };
+		DB264040284CCA560022E00F /* LargeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
+		DB264043284CCE420022E00F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DB264045284CCE710022E00F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		DB264047284CCEB90022E00F /* NewsFeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedAPI.swift; sourceTree = "<group>"; };
+		DB26404E284CD4140022E00F /* PostTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextCell.swift; sourceTree = "<group>"; };
+		DB264050284CD4400022E00F /* PhotoPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPostCell.swift; sourceTree = "<group>"; };
+		DB264052284CD4700022E00F /* LikeCommCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCommCell.swift; sourceTree = "<group>"; };
+		DB264054284CD4C80022E00F /* NewsPhotoCollectionCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPhotoCollectionCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB264056284CD95E0022E00F /* NewsChannelHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsChannelHeaderCell.swift; sourceTree = "<group>"; };
+		DB264062284D8C5F0022E00F /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
 		DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
 		DB4518D42835AB8B006C3C53 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		DB4518D62835AC83006C3C53 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
@@ -64,6 +98,16 @@
 		DB75E1C028201955008A7EE5 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		DB75E1C2282033DC008A7EE5 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		DB75E1C5282054CB008A7EE5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		DB9FB887284C1CA70032233E /* BottomBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItemView.swift; sourceTree = "<group>"; };
+		DB9FB889284C1CEB0032233E /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		DB9FB88B284C1D0E0032233E /* BottomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
+		DB9FB88D284C1D2D0032233E /* BarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarBuilder.swift; sourceTree = "<group>"; };
+		DB9FB88F284C1E510032233E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DB9FB891284C23830032233E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		DB9FB893284C242A0032233E /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		DB9FB895284C24800032233E /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		DB9FB897284C255A0032233E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		DB9FB899284C25710032233E /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		DBBA33A028483EFB0058CC2F /* LikeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonView.swift; sourceTree = "<group>"; };
 		DBCE57522818455C008F1609 /* Swift-UI-Hometask-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-UI-Hometask-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE575B28184560008F1609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +119,9 @@
 		DBCE576D2818B8FA008F1609 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		DBDDE42C282AA4C100C1EC44 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
+		DBEEEA87284F929200C7E16F /* FriendPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		DBEEEA89284F92FA00C7E16F /* UserPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		DBEEEA8B284F93B900C7E16F /* GroupPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPhotoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +131,7 @@
 			files = (
 				DB4518E22835B4AD006C3C53 /* SDWebImageSwiftUI in Frameworks */,
 				DB4518DD2835ADC3006C3C53 /* Alamofire in Frameworks */,
+				DB26404B284CCF4E0022E00F /* SwiftyJSON in Frameworks */,
 				DB70FE59283B0445001DC7F2 /* CamelSnaKebabPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,12 +139,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB26403D284CC61D0022E00F /* UIKitViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FB897284C255A0032233E /* NewsViewController.swift */,
+				DB9FB899284C25710032233E /* ExitViewController.swift */,
+				DB9FB893284C242A0032233E /* FriendsViewController.swift */,
+				DB9FB891284C23830032233E /* UserViewController.swift */,
+				DBEEEA87284F929200C7E16F /* FriendPhotoCollectionViewController.swift */,
+				DBEEEA89284F92FA00C7E16F /* UserPhotoCollectionViewController.swift */,
+				DBEEEA8B284F93B900C7E16F /* GroupPhotoCollectionViewController.swift */,
+				DB264040284CCA560022E00F /* LargeImageViewController.swift */,
+				DB9FB895284C24800032233E /* GroupsViewController.swift */,
+			);
+			path = UIKitViewControllers;
+			sourceTree = "<group>";
+		};
+		DB264042284CCE2B0022E00F /* Flyweight (colors) */ = {
+			isa = PBXGroup;
+			children = (
+				DB264043284CCE420022E00F /* Colors.swift */,
+			);
+			path = "Flyweight (colors)";
+			sourceTree = "<group>";
+		};
 		DB4518D02835AB1F006C3C53 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				DB4518D12835AB3C006C3C53 /* FriendsAPI.swift */,
 				DB54F553283657F5003190FF /* GroupsAPI.swift */,
 				DB0DD0BD284638C10035ECA3 /* PhotosAPI.swift */,
+				DB264047284CCEB90022E00F /* NewsFeedAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -105,8 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				DB4518D42835AB8B006C3C53 /* Friend.swift */,
+				DB26404E284CD4140022E00F /* PostTextCell.swift */,
+				DB264056284CD95E0022E00F /* NewsChannelHeaderCell.swift */,
+				DB264054284CD4C80022E00F /* NewsPhotoCollectionCellCollectionViewCell.swift */,
+				DB264052284CD4700022E00F /* LikeCommCell.swift */,
+				DB264050284CD4400022E00F /* PhotoPostCell.swift */,
+				DB264062284D8C5F0022E00F /* PhotoCollectionCell.swift */,
 				DB54F555283658E1003190FF /* Group.swift */,
 				DB0DD0BF28463CF40035ECA3 /* Photo.swift */,
+				DB264045284CCE710022E00F /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +225,18 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		DB9FB886284C1C360032233E /* BottomBarByDmitryMarinin */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FB887284C1CA70032233E /* BottomBarItemView.swift */,
+				DB9FB889284C1CEB0032233E /* BottomBar.swift */,
+				DB9FB88D284C1D2D0032233E /* BarBuilder.swift */,
+				DB9FB88F284C1E510032233E /* MainTabBarController.swift */,
+				DB9FB88B284C1D0E0032233E /* BottomBarItem.swift */,
+			);
+			path = BottomBarByDmitryMarinin;
+			sourceTree = "<group>";
+		};
 		DBCE57492818455C008F1609 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +256,7 @@
 		DBCE57542818455C008F1609 /* Swift-UI-Hometask-2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				DB264042284CCE2B0022E00F /* Flyweight (colors) */,
 				DBCE576B2818B710008F1609 /* ContainerView.swift */,
 				DBCE576D2818B8FA008F1609 /* UserView.swift */,
 				DBDDE42E282AC8DE00C1EC44 /* PhotoGridView.swift */,
@@ -179,6 +272,8 @@
 				DB0DD0C5284679450035ECA3 /* PhotoCellView.swift */,
 				DB54F55928365CCE003190FF /* GroupCellView.swift */,
 				DBBA33A028483EFB0058CC2F /* LikeButtonView.swift */,
+				DB26403D284CC61D0022E00F /* UIKitViewControllers */,
+				DB9FB886284C1C360032233E /* BottomBarByDmitryMarinin */,
 				DB4518D82835ACAF006C3C53 /* Extension */,
 				DB4518D32835AB76006C3C53 /* Models */,
 				DB4518D02835AB1F006C3C53 /* API */,
@@ -221,6 +316,7 @@
 				DB4518DC2835ADC3006C3C53 /* Alamofire */,
 				DB4518E12835B4AD006C3C53 /* SDWebImageSwiftUI */,
 				DB70FE58283B0445001DC7F2 /* CamelSnaKebabPackage */,
+				DB26404A284CCF4E0022E00F /* SwiftyJSON */,
 			);
 			productName = "Swift-UI-Hometask-2.0";
 			productReference = DBCE57522818455C008F1609 /* Swift-UI-Hometask-2.0.app */;
@@ -253,6 +349,7 @@
 				DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DB4518E02835B4AD006C3C53 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				DB70FE57283B0445001DC7F2 /* XCRemoteSwiftPackageReference "CamelSnaKebabPackage" */,
+				DB264049284CCF4E0022E00F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = DBCE57532818455C008F1609 /* Products */;
 			projectDirPath = "";
@@ -282,29 +379,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4ACC67283319C4009E7465 /* Session.swift in Sources */,
+				DB264046284CCE710022E00F /* News.swift in Sources */,
+				DB264044284CCE420022E00F /* Colors.swift in Sources */,
+				DBEEEA88284F929200C7E16F /* FriendPhotoCollectionViewController.swift in Sources */,
 				DB4518D52835AB8B006C3C53 /* Friend.swift in Sources */,
+				DB264051284CD4400022E00F /* PhotoPostCell.swift in Sources */,
+				DB264057284CD95E0022E00F /* NewsChannelHeaderCell.swift in Sources */,
 				DB75E1C3282033DD008A7EE5 /* GroupsView.swift in Sources */,
 				DB75E1C128201955008A7EE5 /* FriendsView.swift in Sources */,
+				DB9FB894284C242A0032233E /* FriendsViewController.swift in Sources */,
+				DB264055284CD4C80022E00F /* NewsPhotoCollectionCellCollectionViewCell.swift in Sources */,
 				DB75E1BF282015B2008A7EE5 /* Hometask2App.swift in Sources */,
 				DB0DD0BE284638C10035ECA3 /* PhotosAPI.swift in Sources */,
 				DBDDE42D282AA4C100C1EC44 /* Friends.swift in Sources */,
 				DB0DD0C428463FF60035ECA3 /* PhotosView.swift in Sources */,
 				DB54F556283658E1003190FF /* Group.swift in Sources */,
+				DBEEEA8A284F92FA00C7E16F /* UserPhotoCollectionViewController.swift in Sources */,
 				DB54F55A28365CCE003190FF /* GroupCellView.swift in Sources */,
+				DB9FB890284C1E510032233E /* MainTabBarController.swift in Sources */,
 				DB0DD0C228463E850035ECA3 /* PhotosViewModel.swift in Sources */,
+				DB9FB88A284C1CEB0032233E /* BottomBar.swift in Sources */,
+				DB9FB896284C24800032233E /* GroupsViewController.swift in Sources */,
+				DB9FB898284C255A0032233E /* NewsViewController.swift in Sources */,
 				DBDDE42F282AC8DE00C1EC44 /* PhotoGridView.swift in Sources */,
+				DB9FB88C284C1D0E0032233E /* BottomBarItem.swift in Sources */,
 				DB4518DA2835ACC7006C3C53 /* Data+PrettyJSON.swift in Sources */,
 				DBCE576C2818B710008F1609 /* ContainerView.swift in Sources */,
+				DB9FB888284C1CA70032233E /* BottomBarItemView.swift in Sources */,
 				DB4518DF2835AE2E006C3C53 /* FriendCellView.swift in Sources */,
+				DBEEEA8C284F93B900C7E16F /* GroupPhotoCollectionViewController.swift in Sources */,
 				DBCE576E2818B8FA008F1609 /* UserView.swift in Sources */,
 				DB4ACC6C28332400009E7465 /* TemporaryView.swift in Sources */,
 				DB54F554283657F5003190FF /* GroupsAPI.swift in Sources */,
 				DBBA33A128483EFB0058CC2F /* LikeButtonView.swift in Sources */,
+				DB9FB89A284C25710032233E /* ExitViewController.swift in Sources */,
 				DB0DD0C028463CF40035ECA3 /* Photo.swift in Sources */,
+				DB264048284CCEB90022E00F /* NewsFeedAPI.swift in Sources */,
 				DBCE576A2818458C008F1609 /* LoginAndPasswordView.swift in Sources */,
+				DB9FB892284C23830032233E /* UserViewController.swift in Sources */,
+				DB264053284CD4700022E00F /* LikeCommCell.swift in Sources */,
 				DB4518D72835AC83006C3C53 /* FriendsViewModel.swift in Sources */,
+				DB9FB88E284C1D2D0032233E /* BarBuilder.swift in Sources */,
 				DB0DD0C6284679450035ECA3 /* PhotoCellView.swift in Sources */,
 				DB54F55828365B45003190FF /* GroupsViewModel.swift in Sources */,
+				DB264063284D8C5F0022E00F /* PhotoCollectionCell.swift in Sources */,
+				DB264041284CCA560022E00F /* LargeImageViewController.swift in Sources */,
+				DB26404F284CD4140022E00F /* PostTextCell.swift in Sources */,
 				DB4ACC6A28331B38009E7465 /* AuthView.swift in Sources */,
 				DB75E1C6282054CB008A7EE5 /* Groups.swift in Sources */,
 				DB4518D22835AB3C006C3C53 /* FriendsAPI.swift in Sources */,
@@ -505,6 +625,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DB264049284CCF4E0022E00F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -532,6 +660,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB26404A284CCF4E0022E00F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB264049284CCF4E0022E00F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		DB4518DC2835ADC3006C3C53 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DB4518DB2835ADC3006C3C53 /* XCRemoteSwiftPackageReference "Alamofire" */;

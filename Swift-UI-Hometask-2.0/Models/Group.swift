@@ -24,19 +24,32 @@ import Foundation
  }
  */
 
-//MARK: THIS IS MANUAL PARSING
-//We take necessary values from the list above
-struct GroupAPI: Codable, Identifiable{
-    var id: Int = 0
-    var name: String = ""
-    var photo100: String = ""
-    var screen_name: String = ""
-    
-    init(item: [String: Any]) {
-        self.id = item["id"] as! Int
-        self.name = item["name"] as! String
-        self.photo100 = item["photo_100"] as! String
-        self.screen_name = item["screen_name"] as! String
-        
-    }
+
+// MARK: - GroupsContainer
+struct GroupsContainer: Codable {
+    let response: GroupsResponse
 }
+
+//MARK: - Response
+struct GroupsResponse: Codable {
+    let count: Int
+    let items: [GroupAPI]
+}
+
+/// Friend is our replacement for Item from the example
+struct GroupAPI: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let photo100: String
+    let screen_name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name = "name"
+        case photo100 = "photo_100"
+        case screen_name = "screen_name"
+    }
+    
+}
+
+

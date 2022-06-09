@@ -16,7 +16,7 @@ struct PhotoCellView: View {
     var body: some View {
        
         GeometryReader { proxy in
-            WebImage(url: URL(string: photoAPI.sizes.last?.url ?? "Beth-img"))
+            WebImage(url: URL(string: photoAPI.sizes?.last?.url ?? "Beth-img"))
                 .resizable() // Resizable like SwiftUI.Image
                 // Supports ViewBuilder as well
                 .aspectRatio(contentMode: .fit)

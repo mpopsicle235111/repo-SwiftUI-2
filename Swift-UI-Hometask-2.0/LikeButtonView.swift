@@ -17,7 +17,7 @@ struct LikeButtonView: View {
     var body: some View {
         
         VStack(spacing: 10) {
-            //This spacer pins view to the bottom of the PhotoCelView
+            //This spacer pins view to the bottom of the PhotoCellView
             Spacer()
             HStack {
                 //This spacer shifts the heart to the right

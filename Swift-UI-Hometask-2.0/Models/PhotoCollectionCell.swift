@@ -15,7 +15,7 @@ class PhotoCollectionCell: UICollectionViewCell {
     static let reuseId = "PhotoCollectionCell"
     
     private let likeButton: UIImageView = {
-        let image = UIImage(named: "GrayLayer-Small-Heart-img")
+        let image = UIImage(named: "translucent-bird")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -26,7 +26,7 @@ class PhotoCollectionCell: UICollectionViewCell {
     }()
     
     //This is an object, that contains the photo
-    private let photoImageView: UIImageView = {
+    let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .clear
@@ -35,16 +35,15 @@ class PhotoCollectionCell: UICollectionViewCell {
     }()
     
     //Accepts photo from JSON
-//    var photoAPI: PhotoAPI! {
-//        didSet {
-//            //We use SDWebImage Library to add picture into the cell
-//            //Setting placeholder image solves the cell image display problem
-//            if let url = URL(string: photoAPI.sizes.last?.url ?? "GrayLayer-Small-Heart-img") {
-//                photoImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "GrayLayer-Small-Heart-img"), completed: nil)
-//                
-//            }
-//        }
-//    }
+    //var photoAPI: PhotoAPI! {
+    //        didSet {
+    //We use SDWebImage Library to add picture into the cell
+    //Setting placeholder image solves the cell image display problem
+    //if let url = URL(string: photoAPI.sizes.last?.url ?? "GrayLayer-Small-Heart-img") {
+    //                photoImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "GrayLayer-Small-Heart-img"), completed: nil)
+    //            }
+    //        }
+    //    }
     
 
     
@@ -62,6 +61,8 @@ class PhotoCollectionCell: UICollectionViewCell {
     }
     
     private func updateSelectedState() {
+        //The photo image is not affected - because it's nil,
+        //it is in the ViewController, not here
         photoImageView.alpha = isSelected ? 0.7 : 1
         likeButton.alpha = isSelected ? 1 : 0
     }

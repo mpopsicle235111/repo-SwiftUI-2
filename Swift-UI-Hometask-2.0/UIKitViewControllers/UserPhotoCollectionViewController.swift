@@ -8,6 +8,9 @@
 //
 //  NavigationController with code by iOS Academy
 //  https://youtu.be/Ime8NK5NLgc
+//
+//  PhotoCollectionViewController by Алексей Пархоменко
+//  https://youtu.be/qmYNDXILDjY
 
 import UIKit
 
@@ -21,6 +24,9 @@ class UserPhotoCollectionViewController: UIViewController {
     //private let button = UIButton()
     private var userCollectionView: UICollectionView?
     
+    //The images which we select by tapping
+    private var selectedImages = [UIImage]()
+    
     var api: PhotosService
     //Added to get other people's photos:
     //var friend: FriendAPI
@@ -30,6 +36,19 @@ class UserPhotoCollectionViewController: UIViewController {
     private let itemsPerRow: CGFloat = 2
     //Padding
     private let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
+    //2 navigation buttons to save selected photos to Gallery
+    //We just use one bar button item in this project
+    //private lazy var addBarButtonItem: UIBarButtonItem = {
+    //    return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
+    //}()
+    //We just use one bar button item in this project
+        private lazy var actionBarButtonItem: UIBarButtonItem = {
+            return UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionBarButtonTapped))
+        }()
+        private var numberOfSelectedPhotos: Int {
+            return userCollectionView?.indexPathsForSelectedItems?.count ?? 0  //If there are none - it's zero
+        }
         
 
         init(api: PhotosService) {
@@ -58,10 +77,10 @@ class UserPhotoCollectionViewController: UIViewController {
         photosAPI.getPhotos(userId: Int(Session.shared.userId) ?? 0) { [weak self] photos in
         guard let self = self else { return }
         self.photos = photos
-        print("WWWWWWWWWWWWW")
-        print(photos)
-        print("WWWWWWWWWWWWW")
         self.displayCollectionView()
+        
+        self.updateNavigationButtonsState()
+        self.setupNavigationBar()
         
         
         
@@ -71,15 +90,62 @@ class UserPhotoCollectionViewController: UIViewController {
         }
     }
     
-//    @objc private func buttonTapped() {
-//        let vc = UIViewController()
-//        vc.view.backgroundColor = .white
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-    //@objc private func dismissSelf(){
-    //    dismiss(animated: true, completion: nil)
+    ///The buttons that sre sending the selected images to DeviceGallery will be unavailable untill we select the images
+    private func updateNavigationButtonsState() {
+        
+        //This second button is not used
+        //addBarButtonItem.isEnabled = numberOfSelectedPhotos > 0
+        
+        actionBarButtonItem.isEnabled = numberOfSelectedPhotos > 0
+    }
+    
+    ///Clears all selections as soon as images have been sent to Device Gallery
+    func refresh() {
+        self.selectedImages.removeAll()
+        self.userCollectionView?.selectItem(at: nil, animated: true, scrollPosition: [])
+        updateNavigationButtonsState()
+        
+    }
+    
+    //This is a NavBar with export buttons
+    private func setupNavigationBar() {
+        //If we wanted to give a custom name to the left nav button
+        //let titleLabel = UILabel()
+        //titleLabel.text = "Friend's Photos"
+        //titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        //titleLabel.textColor = .orange
+        //navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+        
+        self.title = "SAVE SELECTED ->>>"
+        
+        //navigationItem.rightBarButtonItems = [actionBarButtonItem, addBarButtonItem]
+        //We just use one button:
+        navigationItem.rightBarButtonItem = actionBarButtonItem
+    }
+    
+    //Not used
+    //@objc private func addBarButtonTapped() {
+    //    print(#function)
     //}
+    
+    
+    @objc private func actionBarButtonTapped() {
+        print(#function)
+        
+        let shareController = UIActivityViewController(activityItems: selectedImages, applicationActivities: nil)
+        
+        //If we have successfully exported photos, clear marks.
+        //Refresh is defined above
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                self.refresh()
+            }
+        }
+        //This necessary for our modal controller to work on any device
+        shareController.popoverPresentationController?.sourceView = self.view
+        shareController.popoverPresentationController?.permittedArrowDirections = .any
+        present(shareController, animated: true, completion: nil)
+    }
     
     private func displayCollectionView() {
         
@@ -100,6 +166,9 @@ class UserPhotoCollectionViewController: UIViewController {
         //Define images layout
         userCollectionView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         userCollectionView.contentInsetAdjustmentBehavior = .automatic
+        
+        //Allow to select many images
+        userCollectionView.allowsMultipleSelection = true
     }
     
     //private func displayNavigationBar() {
@@ -110,6 +179,37 @@ class UserPhotoCollectionViewController: UIViewController {
     //        target: self,
     //        action: #selector(dismissSelf))
     //}
+}
+
+//Select/deselect items for sending away
+extension UserPhotoCollectionViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //We have selected the image to export - make export buttons active
+        updateNavigationButtonsState()
+        print("Selected item: \(indexPath.row)")
+        //This is our selected cell
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionCell
+        //We get the image view from the cell
+        guard let image = cell.backgroundView?.largeContentImage else { return }
+        //Add selected image to array
+        selectedImages.append(image)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        //We have deselected the image to export - chech if we need to deactivate the export buttons
+        updateNavigationButtonsState()
+        print("Deselected item: \(indexPath.row)")
+        //This is our selected cell
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionCell
+        //We get the image view from the cell
+        guard let image = cell.backgroundView?.largeContentImage else { return }
+        //If we have previously selected this image - we remove it from the array
+        if let index = selectedImages.firstIndex(of: image) {
+            selectedImages.remove(at: index)
+        }
+        
+    }
 }
 
 extension UserPhotoCollectionViewController: UICollectionViewDataSource {
@@ -135,12 +235,6 @@ extension UserPhotoCollectionViewController: UICollectionViewDataSource {
     }
 }
 
-extension UserPhotoCollectionViewController: UICollectionViewDelegate {
- 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       print("User tapped on item \(indexPath.row)")
-    }
-}
 
 extension UserPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
@@ -149,18 +243,32 @@ extension UserPhotoCollectionViewController: UICollectionViewDelegateFlowLayout 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //We want to calculate the measurements of a certain photo
         let photo = photos[indexPath.item]
+        //How many paddings do we have:
+        //PADDING+PHOTO+PADDING+PHOTO+PADDING
+        //If we want two photos, we need 3 paddings
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width / itemsPerRow
+        //Three photos in row:
+        //let availableWidth = view.frame.width / itemsPerRow
+        //Two photos in row
+        //The width that we have: screen width minus 3 paddings
+        let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
+        // We calculate image height and keep aspect ration
+        // by adjusting height as per available width.
+        // Put these 3 values into proportion equation
+        // and you'll see that the 4th value (numerator) is:
+        // denominator * 2nd numerator / denominator
         let height = CGFloat(photo.sizes?[0].height ?? 50) * widthPerItem / CGFloat(photo.sizes?[0].width ?? 50)
         return CGSize(width: widthPerItem, height: height)
     }
     
+    /// Calculates the distances between the objects
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return sectionInsets
     }
     
+    /// Calculates the distances between the objects
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return sectionInsets.left
